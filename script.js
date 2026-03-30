@@ -3,7 +3,7 @@
 // ==============================================
 
 const USE_IMAGE = true;
-const IMAGE_SRC = "https://picsum.photos/seed/puzzle/306/306";
+const IMAGE_SRC = "images/IMG_0037.AVIF";
 const GRID_SIZE = 3;
 const TILE_PX = 100;
 const GOAL_STATE = [1, 2, 3, 4, 5, 6, 7, 8, 0];
