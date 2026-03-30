@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tile Shift</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+    <h1>Tile Shift</h1>
+
+    <!-- HUD: live stats displayed above the board -->
+    <div id="hud">
+        <span><label>Moves</label></span><strong id="move-count">0</strong></span>
+        <span><label>Time</label></span><strong id="timer-display">0:00</strong></span>
+        <span><label>Best</label></span><strong id="best-display">--</strong></span>
+    </div>
+
+    <!-- The 3x3 puzzle board - tiles are injected by JS -->
+    <div id="board"></div>
+
+    <!-- Win message shown on completion -->
+    <div id="board"></div>
+
+    <button onClick="initGame()">Shuffle</button>
+
+    <!-- Script loaded at end of body so the DOM is ready when it runs -->
+    <script src="script.js"></script>
+
+</body>
+</html>
