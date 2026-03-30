@@ -28,7 +28,7 @@ body {
     border: 2px solid #333;
     cursor: pointer;
     border-radius: 6px;
-    overflow: hidden /* keeps image inside tile bounds */
+    overflow: hidden; /* keeps image inside tile bounds */
 }
 
 /* Tiles that can legally move get a highlight */
@@ -42,15 +42,6 @@ body {
     border: none;
     background: transparent;
     cursor: default;
-}
-
-/* --- Tile image - fills the tile, clipped from a shared source --- */
-.tile img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    pointer-events: none; /* prevents drag ghost on image */
 }
 
 /* --- HUD: timer, move counter, best score --- */
