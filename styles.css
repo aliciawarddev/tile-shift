@@ -1,0 +1,89 @@
+/* ==============================================
+   STYLES — minimal, functional layout only
+   ============================================== */
+
+body {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+/* --- Board Grid --- */
+#board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 6px;
+    margin: 1.5rem 0;
+}
+
+/* --- Individual Tiles --- */
+.tile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    border: 2px solid #333;
+    cursor: pointer;
+    border-radius: 6px;
+    overflow: hidden /* keeps image inside tile bounds */
+}
+
+/* Tiles that can legally move get a highlight */
+.tile.movable {
+    border-color: steelblue;
+    cursor: pointer;
+}
+
+/* The empty tile is invisible */
+.tile.empty {
+    border: none;
+    background: transparent;
+    cursor: default;
+}
+
+/* --- Tile image - fills the tile, clipped from a shared source --- */
+.tile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    pointer-events: none; /* prevents drag ghost on image */
+}
+
+/* --- HUD: timer, move counter, best score --- */
+#hud {
+    display: flex;
+    gap: 2rem;
+    font-size: 1rem;
+}
+
+#hud span {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+}
+
+#hud label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: #888;
+}
+
+/* --- Win message (hidden until solved) --- */
+#win-msg {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: green;
+    min-height: 1.5rem;
+}
+
+button {
+    margin-top: 0.5rem;
+    padding: 0.5rem 1.25rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
